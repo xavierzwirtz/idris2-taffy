@@ -1,0 +1,8 @@
+package idris2-taffy
+
+authors    = "xavierzwirtz"
+version    = 0.1.0
+sourcedir  = "src"
+depends    = contrib
+           , base         >= 0.6.0
+
