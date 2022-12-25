@@ -1,13 +1,13 @@
 module Main
 
-import Taffy.Bindings
-import TaffyExt.Bindings
+import TaffyBindings
+import TaffyExtBindings
 import Data.String
 
-defaultTaffyStyleDimension : Taffy.Bindings.TaffyStyleDimension
+defaultTaffyStyleDimension : TaffyBindings.TaffyStyleDimension
 defaultTaffyStyleDimension = MkTaffyStyleDimension 2 0
 
-taffyLengthPercentageZero : Taffy.Bindings.TaffyStyleDimension
+taffyLengthPercentageZero : TaffyBindings.TaffyStyleDimension
 taffyLengthPercentageZero = MkTaffyStyleDimension 0 0
 
 defaultTaffyStyleRect : TaffyStyleRect

@@ -1,6 +1,4 @@
 {
-  description = "tree-sitter grammer for idris2";
-
   inputs.nixpkgs.url = "github:NixOS/nixpkgs";
   inputs.flake-utils.url = "github:numtide/flake-utils";
   # inputs.idris2-pkgs.url = "github:claymager/idris2-pkgs";
@@ -80,7 +78,7 @@
               libName = "libidris2-taffy-ext";
               clib = libidris2-taffy-ext;
               ccArgs = "-I${taffy-clib}/include";
-              rootModuleName = "TaffyExt";
+              moduleName = "TaffyExtBindings";
               structs = [
                 {
                   structName = "Idris2_Taffy_Ext_Layout";
@@ -138,7 +136,7 @@
               header = "${taffy-clib}/include/taffy.h";
               libName = "libtaffy";
               clib = taffy-clib;
-              rootModuleName = "Taffy";
+              moduleName = "TaffyBindings";
               structs = [
                 {
                   structName = "TaffyStyleDimension";

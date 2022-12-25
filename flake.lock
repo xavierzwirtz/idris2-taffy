@@ -638,11 +638,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1671816117,
-        "narHash": "sha256-LaR/dCFbxIJV3dC5LyiygLs8MF8wm4nBaFT9z+3G9W0=",
+        "lastModified": 1671927252,
+        "narHash": "sha256-lV4Kk/hzVsOs/sDmxm7cA/714cVeA1ofqp+ZNVVoS0w=",
         "owner": "xavierzwirtz",
         "repo": "idris2-ffigen",
-        "rev": "accd773d28283190f9c827bb2499bd11cf7b836c",
+        "rev": "9da051689e1aba839027fe00adf7bcc15c251232",
         "type": "github"
       },
       "original": {
