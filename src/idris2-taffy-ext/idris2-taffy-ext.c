@@ -8,26 +8,32 @@ void* Idris2_Taffy_Ext_Layout_get_child(Idris2_Taffy_Ext_Layout layout, int chil
     return layout.children[child];
 };
 
-void* idris2_taffy_ext_create_layout(const float* f)
+void* idris2_taffy_ext_create_layout_inner(float** f)
 {
     Idris2_Taffy_Ext_Layout* layout = malloc(sizeof(struct Idris2_Taffy_Ext_Layout));
 
-    layout->x = *f;
-    f++;
-    layout->y = *f;
-    f++;
-    layout->width = *f;
-    f++;
-    layout->height = *f;
-    f++;
-    layout->childCount = *f;
-    f++;
+    layout->x = **f;
+    (*f)++;
+    layout->y = **f;
+    (*f)++;
+    layout->width = **f;
+    (*f)++;
+    layout->height = **f;
+    (*f)++;
+    layout->childCount = **f;
+    (*f)++;
 
     layout->children = malloc(sizeof(void *) * layout->childCount);
     for (int i = 0; i < layout->childCount; i++) {
-        layout->children[i] = idris2_taffy_ext_create_layout(f);
+        layout->children[i] = idris2_taffy_ext_create_layout_inner(f);
     }
 
+    return layout;
+}
+
+void* idris2_taffy_ext_create_layout(const float* f)
+{
+    Idris2_Taffy_Ext_Layout* layout = idris2_taffy_ext_create_layout_inner((float **) &f);
     return layout;
 }
 
