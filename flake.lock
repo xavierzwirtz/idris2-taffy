@@ -1363,11 +1363,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1671816060,
-        "narHash": "sha256-hhsDCQE0aAqgNGCl4u+M25tE80H4TUVtmsIvdqb/b+k=",
+        "lastModified": 1672540322,
+        "narHash": "sha256-5CW/M6SX8Uy32tlgqARO0K2G6wZTSubJj9HXcvY34Sk=",
         "owner": "xavierzwirtz",
         "repo": "taffy-nix",
-        "rev": "948cdbc90c65f19edb38bb14294f4f289cdb46e5",
+        "rev": "0666b86a76763cec38d30c9957ad19665d656df2",
         "type": "github"
       },
       "original": {
