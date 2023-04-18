@@ -1,39 +1,19 @@
 {
   inputs.nixpkgs.url = "github:NixOS/nixpkgs";
   inputs.flake-utils.url = "github:numtide/flake-utils";
-  # inputs.idris2-pkgs.url = "github:claymager/idris2-pkgs";
   inputs.taffy-nix.url = "github:xavierzwirtz/taffy-nix";
-  inputs.idris2 = {
-    url = "github:idris-lang/Idris2";
-  };
-  inputs.json = {
-    url = "github:stefan-hoeck/idris2-json";
-    flake = false;
-  };
-  inputs.elab-util = {
-    url = "github:stefan-hoeck/idris2-elab-util";
-    flake = false;
-  };
-
   inputs.idris2-pkgs = {
-    url = "github:lizard-business/idris2-pkgs/idris0.6.0";
+    url = "github:xavierzwirtz/idris2-pkgs";
     inputs.nixpkgs.follows = "nixpkgs";
-    inputs.idris2.follows = "idris2";
-    inputs.json.follows = "json";
-    inputs.elab-util.follows = "elab-util";
   };
 
   inputs.idris2-ffigen.url = "github:xavierzwirtz/idris2-ffigen";
-  # inputs.idris2-ffigen.url = "path:/home/xavier/projects/idris2-ffigen";
   outputs =
     { self
     , nixpkgs
     , flake-utils
     , taffy-nix
     , idris2-pkgs
-    , idris2
-    , json
-    , elab-util
     , idris2-ffigen
     }:
     let
